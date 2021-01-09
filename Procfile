@@ -1,1 +1,1 @@
-web: play run --http.port=$PORT $PLAY_OPTS
+web: sh setup.sh && streamlit run youtubedownload.py
