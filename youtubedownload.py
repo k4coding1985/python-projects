@@ -4,7 +4,8 @@ from pytube import YouTube
 import os
 import base64
 
-url=st.text_input("enter youtube url here") #input text box for url
+st.title("Youtube video downloader")
+url=st.text_input("Enter youtube url here") #input text box for url
 
 def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
@@ -14,12 +15,12 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     return href
 
 
-if st.button("Load"): #runs when button click
-   yt=YouTube(url) # youtube instance 
-   highres=yt.streams.get_highest_resolution().resolution #finding highest resolution
-   st.write("resolution:" + highres) # displaying highest resolution
+#if st.button("Load"): #runs when button click
+   #yt=YouTube(url) # youtube instance 
+   #highres=yt.streams.get_highest_resolution().resolution #finding highest resolution
+   #st.write("resolution:" + highres) # displaying highest resolution
       
-if st.button("download"):
+if st.button("Download Video"):
     print(url)
     yt=YouTube(url)  
     try:  
