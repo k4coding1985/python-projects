@@ -18,9 +18,7 @@ if st.button("Load"): #runs when button click
    yt=YouTube(url) # youtube instance 
    highres=yt.streams.get_highest_resolution().resolution #finding highest resolution
    st.write("resolution:" + highres) # displaying highest resolution
-   
- 
-   
+      
 if st.button("download"):
     print(url)
     yt=YouTube(url)  
@@ -28,7 +26,7 @@ if st.button("download"):
         # downloading the video   
       #yt.streams.filter().get_by_resolution("720p").download("","./yt.mp4")#.download('D:/') # download with resolution and path 
       st.markdown(get_binary_file_downloader_html( yt.streams.filter().get_by_resolution("720p").download("","./yt.mp4"), 'Video'), unsafe_allow_html=True)
-      st.info('file downloaded in D: drive')
+      st.info('File available for download ,Click on link to download')
       st.balloons()
     except Exception as e:  
         st.error( e )  
