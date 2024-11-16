@@ -1,2 +1,6 @@
-streamlit==0.73.1
-pytube==10.4.1
+streamlit==1.25.0          # For creating the web app
+mysql-connector-python==8.1.0  # For connecting Python with MySQL
+pandas==2.1.2              # For data manipulation and handling
+numpy==1.26.0              # For numerical computations
+plotly==5.17.0             # For interactive visualizations (optional, if used)
+python-decouple==3.8       # For managing environment variables (optional, if used)
